@@ -7,6 +7,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -40,5 +42,11 @@ public class Hotel {
 
     @Column(nullable = false)
     private boolean isActive;
+
+    @ManyToOne
+    private User owner;
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Room> rooms = new ArrayList<>();
 
 }
