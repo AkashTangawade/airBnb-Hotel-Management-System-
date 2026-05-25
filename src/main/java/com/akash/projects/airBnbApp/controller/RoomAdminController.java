@@ -1,8 +1,6 @@
 package com.akash.projects.airBnbApp.controller;
 
 import com.akash.projects.airBnbApp.dto.RoomDto;
-import com.akash.projects.airBnbApp.entity.Room;
-import com.akash.projects.airBnbApp.service.HotelService;
 import com.akash.projects.airBnbApp.service.RoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

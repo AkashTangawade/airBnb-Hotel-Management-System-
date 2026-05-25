@@ -78,6 +78,7 @@ public class HotelServiceImpl implements HotelService{
                 .orElseThrow(()->new ResourceNotFoundException("Hotel not found with ID"+hotelId));
 
         hotel.setActive(true);
+        hotelRepository.save(hotel);
         //TODO: create inventory for all the rooms for this hotel
     }
 
