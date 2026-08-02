@@ -12,6 +12,7 @@ public class HotelDto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
+    private String description;
     private String city;
     private String[] photos;
     private String[] amenities;

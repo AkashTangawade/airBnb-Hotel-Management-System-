@@ -59,6 +59,8 @@ public class RoomServiceImpl implements RoomService{
         return modelMapper.map(room, RoomDto.class);
     }
 
+
+
     @Override
     public void deleteRoomById(Long roomId) {
         log.info("Deleting the room by ID: {}", roomId);
